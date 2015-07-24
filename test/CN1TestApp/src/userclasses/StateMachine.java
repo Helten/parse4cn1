@@ -43,4 +43,9 @@ public class StateMachine extends StateMachineBase {
     protected void initVars(Resources res) {
     }
 
+
+    @Override
+    protected void beforeMain(Form f) {
+         Dialog.show("Native access", Parse.testNativeCall("parse4cn1"), "Ok", null);
+    }
 }

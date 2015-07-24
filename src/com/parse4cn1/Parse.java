@@ -22,6 +22,8 @@ import ca.weblite.codename1.json.JSONArray;
 import ca.weblite.codename1.json.JSONObject;
 import com.codename1.l10n.DateFormat;
 import com.codename1.l10n.SimpleDateFormat;
+import com.codename1.system.NativeLookup;
+import com.codename1.ui.Display;
 import com.parse4cn1.operation.ParseOperationUtil;
 import com.parse4cn1.operation.ParseOperationDecoder;
 import com.parse4cn1.util.ParseRegistry;
@@ -161,7 +163,21 @@ public class Parse {
         mApplicationId = applicationId;
         mClientKey = clientKey;
     }
-
+    
+    static public String testNativeCall(String input) {
+        NativeAccess na = (NativeAccess)NativeLookup.create(NativeAccess.class);
+        if (na != null) {
+            if (na.isSupported()) {
+                return na.testNativeCall(input);
+            } else {
+                return "NativeAccess interface not implemented for platform " + Display.getInstance().getPlatformName();
+            }
+            
+        } else {
+            return "Unable to retrieve native interface";
+        } 
+    }
+        
     /**
      * @return The application ID if one has been set or null.
      * @see #initialize(java.lang.String, java.lang.String)
