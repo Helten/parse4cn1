@@ -52,3 +52,12 @@ https://parse.com/docs/android/guide#push-notifications-troubleshooting
 https://parse.com/apps/quickstart#parse_push/android/native/existing
 
 TESTED with NativeInterface in CN1Application. TODO: Test with NativeInterface in parse4cn1
+
+TODO: Include Parse.Initialize() in Custom Application class so that push can be received even when app is closed
+
+Notes for detecting push open e.g. to store payload so that app can deal with it as appropriate:
+Idea - Subclass BroadcastReceiver and override onPushOpen()
+Useful links:
+- http://www.intridea.com/blog/2011/5/24/how-to-use-application-object-of-android
+- https://www.parse.com/questions/push-notification-in-android-while-app-closed
+- https://parse.com/docs/android/guide#push-notifications-setting-up-push
