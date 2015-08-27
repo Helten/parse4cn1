@@ -22,3 +22,6 @@ test/CN1TestApp/lib/impl/cls/ca/weblite/codename1/json/JSONArray.class
 /test/JavaTestApplication/lib/JavaSE.jar
 test/CN1TestApp/lib/impl/
 /dist/
+/test/ParsePushTestApp/nbproject/private/
+/test/ParsePushTestApp/build/
+/test/ParsePushTestApp/dist/
