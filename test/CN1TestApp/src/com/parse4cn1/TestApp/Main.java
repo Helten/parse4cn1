@@ -17,7 +17,6 @@
 package com.parse4cn1.TestApp;
 
 
-import com.codename1.system.NativeLookup;
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import userclasses.StateMachine;
@@ -47,12 +46,12 @@ public class Main {
             return;
         }
         
-        ParseNativeInterface parseNative = (ParseNativeInterface)NativeLookup.create(ParseNativeInterface.class);
-        if (parseNative != null && parseNative.isSupported()) {
-            parseNative.test("start()");
-            parseNative.initializePushNotifications(
-                    "j1KMuH9otZlHcPncU9dZ1JFH7cXL8K5XUiQQ9ot8", "V6ZUyBtfERtzbq6vjeAb13tiFYij980HN9nQTWGB");
-        }
+//        ParseNativeInterface parseNative = (ParseNativeInterface)NativeLookup.create(ParseNativeInterface.class);
+//        if (parseNative != null && parseNative.isSupported()) {
+//            parseNative.test("start()");
+//            parseNative.initializePushNotifications(
+//                    "j1KMuH9otZlHcPncU9dZ1JFH7cXL8K5XUiQQ9ot8", "V6ZUyBtfERtzbq6vjeAb13tiFYij980HN9nQTWGB");
+//        }
         
         new StateMachine("/theme"); 
     }

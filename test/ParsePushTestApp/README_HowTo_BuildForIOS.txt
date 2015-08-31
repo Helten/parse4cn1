@@ -1,7 +1,9 @@
 Tutorial: http://www.raywenderlich.com/32960/apple-push-notification-services-in-ios-6-tutorial-part-1
 
-Issue: no valid aps: https://www.google.nl/webhp?sourceid=chrome-instant&rlz=1C1CHFX_enNL640NL640&ion=1&espv=2&ie=UTF-8#q=no%20valid%20aps-environment%20entitlement%20string%20found%20for%20application
-
+Issue: no valid aps: 
+1. https://www.google.nl/webhp?sourceid=chrome-instant&rlz=1C1CHFX_enNL640NL640&ion=1&espv=2&ie=UTF-8#q=no%20valid%20aps-environment%20entitlement%20string%20found%20for%20application
+2. Manually signing http://stackoverflow.com/questions/5681172/bundle-identifier-and-push-certificate-aps-environment-entitlement-error
+- Initial result: code object is not signed at all
 
 // ios.add_libs
 Foundation.framework;AudioToolbox.framework;CFNetwork.framework;CoreGraphics.framework;CoreLocation.framework;QuartzCore.framework;Security.framework;StoreKit.framework;SystemConfiguration.framework;libz.dylib;libsqlite3.dylib;Parse.a;Bolts.a
@@ -16,7 +18,7 @@ Accounts.framework;Social.framework
 // ios.objC
 
 // ios.glAppDelegateHeader
-#import <Parse/Parse.h> // --> "Parse.h" since included libraries are flattened
+#import "Parse.h" // <Parse/Parse.h> --> "Parse.h" since included libraries are flattened
 
 
 // ios.afterFinishLaunching

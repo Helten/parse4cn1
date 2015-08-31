@@ -16,23 +16,16 @@
 
 package userclasses;
 
-import com.codename1.system.NativeLookup;
 import generated.StateMachineBase;
 import com.codename1.ui.*; 
-import com.codename1.ui.events.*;
 import com.codename1.ui.util.Resources;
-import com.parse4cn1.Parse;
-import com.parse4cn1.ParseException;
-import com.parse4cn1.TestApp.ParseNativeInterface;
-import com.parse4cn1.command.ParseGetCommand;
-import com.parse4cn1.command.ParseResponse;
 
 /**
  *
  * @author Your name here
  */
 public class StateMachine extends StateMachineBase {
-    private ParseNativeInterface parseNative;
+//    private ParseNativeInterface parseNative;
     
     public StateMachine(String resFile) {
         super(resFile);
@@ -45,38 +38,38 @@ public class StateMachine extends StateMachineBase {
      * the constructor/class scope to avoid race conditions
      */
     protected void initVars(Resources res) {
-        parseNative = (ParseNativeInterface)NativeLookup.create(ParseNativeInterface.class);
-        if (parseNative != null && parseNative.isSupported()) {
-            parseNative.test("initVars()");
-        }
+//        parseNative = (ParseNativeInterface)NativeLookup.create(ParseNativeInterface.class);
+//        if (parseNative != null && parseNative.isSupported()) {
+//            parseNative.test("initVars()");
+//        }
     }
 
 
     @Override
     protected void beforeMain(Form f) {
-        if (parseNative != null && parseNative.isSupported()) {
-            parseNative.test("beforeMain()");
-        }
+//        if (parseNative != null && parseNative.isSupported()) {
+//            parseNative.test("beforeMain()");
+//        }
     }
 
     @Override
     protected void onCreateMain() {
-        if (parseNative != null && parseNative.isSupported()) {
-            parseNative.test("onCreateMain()");
-        }
+//        if (parseNative != null && parseNative.isSupported()) {
+//            parseNative.test("onCreateMain()");
+//        }
     }
 
     @Override
     protected void postMain(Form f) {
-        if (parseNative != null && parseNative.isSupported()) {
-            parseNative.test("postMain()");
-        }
+//        if (parseNative != null && parseNative.isSupported()) {
+//            parseNative.test("postMain()");
+//        }
     }
 
     @Override
     protected void exitMain(Form f) {
-        if (parseNative != null && parseNative.isSupported()) {
-            parseNative.test("exitMain()");
-        }
+//        if (parseNative != null && parseNative.isSupported()) {
+//            parseNative.test("exitMain()");
+//        }
     }
 }
