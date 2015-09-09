@@ -15,6 +15,18 @@ Tips
 Device token registration not working
 - (@"" trick) http://stackoverflow.com/questions/31116849/parse-com-devicetoken-and-pfinstallation-not-saved See also: http://stackoverflow.com/questions/31181428/parse-installation-table-not-registering-devicetoken
 
+
+Issues: Creating certificates
+1. Unknown authority --> Export to .p12 option not visible
+http://stackoverflow.com/questions/13820680/this-certificate-was-signed-by-an-unknown-authority
+
+2. No certificate found (instructions from Parse are not crystal clear). You need a new separate one for this purpose
+http://stackoverflow.com/questions/25223644/no-certificates-are-available-when-adding-ios-provisioning-profile-for-parse-p
+
+=================
+Steps
+
+
 // ios.add_libs
 Foundation.framework;AudioToolbox.framework;CFNetwork.framework;CoreGraphics.framework;CoreLocation.framework;QuartzCore.framework;Security.framework;StoreKit.framework;SystemConfiguration.framework;libz.dylib;libsqlite3.dylib;Parse.a;Bolts.a
 
